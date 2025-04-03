@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFID Lost and Find Model</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <i class="fas fa-tag"></i>
+                </div>
+                <h2>RFID LOST AND FIND MODEL</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="index.html"><i class="fas fa-search"></i> Lost Elements</a>
+                </li>
+                <li>
+                    <a href="found.html"><i class="fas fa-box-open"></i> Found Elements</a>
+                </li>
+                <li>
+                    <a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
+                </li>
+                <li>
+                    <a href="analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a>
+                </li>
+                <li>
+                    <a href="comparison.html"><i class="fas fa-exchange-alt"></i> Comparison</a>
+                </li>
+                <li>
+                    <a href="shop.html"><i class="fas fa-shopping-cart"></i> RFID Shop</a>
+                </li>
+                <li>
+                    <a href="help.html"><i class="fas fa-question-circle"></i> Help</a>
+                </li>
+                <li>
+                    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="top-bar">
+                <div class="search-container">
+                    <input type="text" placeholder="Search by RFID tag, item name, location, or owner details...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="user-actions">
+                    <a href="login.html" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label>Category</label>
+                        <select id="category-filter">
+                            <option>All Categories</option>
+                            <option>Electronics</option>
+                            <option>Luggage</option>
+                            <option>Personal Items</option>
+                            <option>Documents</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Location</label>
+                        <select id="location-filter">
+                            <option>All Locations</option>
+                            <option>Terminal 1</option>
+                            <option>Terminal 2</option>
+                            <option>Gate 15</option>
+                            <option>Lost & Found Office</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Date Range</label>
+                        <input type="date" id="date-filter">
+                    </div>
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select id="status-filter">
+                            <option>All Status</option>
+                            <option>Found</option>
+                            <option>Claimed</option>
+                            <option>Processing</option>
+                        </select>
+                    </div>
+                    <button class="search-btn">Search</button>
+                </div>
+
+                <div class="item-details-section">
+                    <h2>Item Details <span class="found-tag">Found</span></h2>
+                    <div class="item-details-container">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/300x300" alt="Item Image">
+                        </div>
+                        <div class="item-info">
+                            <div class="info-row">
+                                <div class="info-label">Item Name:</div>
+                                <div class="info-value">Blue Laptop Bag</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Category:</div>
+                                <div class="info-value">Luggage</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">RFID Tag ID:</div>
+                                <div class="info-value">RF-7842-9521-3648</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Found Date:</div>
+                                <div class="info-value">March 28, 2025, 2:45 PM</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Location Found:</div>
+                                <div class="info-value">Terminal 2, Gate 15, Airport</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Current Location:</div>
+                                <div class="info-value">Lost & Found Office, Terminal 2</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">Description:</div>
+                                <div class="info-value">Medium-sized blue laptop bag with front pocket and side water bottle holder. Contains laptop charger and notebook.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-view">
+                        <div id="map"></div>
+                        <div class="map-label">Map View</div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="claim-btn"><i class="fas fa-hand-holding"></i> Claim Item</button>
+                        <button class="report-btn"><i class="fas fa-flag"></i> Report Issue</button>
+                        <button class="history-btn"><i class="fas fa-history"></i> View History</button>
+                    </div>
+
+                    <div class="progress-tracker">
+                        <div class="progress-step completed">
+                            <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <div class="step-label">Item Reported</div>
+                        </div>
+                        <div class="progress-step completed">
+                            <div class="step-icon"><i class="fas fa-tag"></i></div>
+                            <div class="step-label">RFID Detected</div>
+                        </div>
+                        <div class="progress-step active">
+                            <div class="step-icon"><i class="fas fa-cogs"></i></div>
+                            <div class="step-label">Processing</div>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="step-label">Claimed</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="statistics-section">
+                    <div class="statistics-card">
+                        <h3>Item Statistics</h3>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <div class="stat-value">247</div>
+                                <div class="stat-label">Items Found This Month</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">183</div>
+                                <div class="stat-label">Items Claimed</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">78%</div>
+                                <div class="stat-label">Recovery Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="statistics-card">
+                        <h3>AI Predictions</h3>
+                        <div class="stats-container">
+                            <div class="stat-box">
+                                <div class="stat-value">94%</div>
+                                <div class="stat-label">Owner Match Confidence</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">Potential Owners</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">High</div>
+                                <div class="stat-label">Claim Probability</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
