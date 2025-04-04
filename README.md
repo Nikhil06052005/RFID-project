@@ -3,11 +3,9 @@
 A smart, scalable solution to track and recover lost items in real-time using **RFID, AI, and Cloud integration**.
 
 ## 🚨 Problem
-
 Millions of items are lost annually in public places like airports, metros, and hotels, causing **stress, time loss, and security issues**. Traditional lost-and-found systems are manual, slow, and depend heavily on human effort.
 
 ## 🚀 Our Solution
-
 An **AI-powered RFID system** that automates the item recovery process:
 
 - RFID tags on items for unique identification
@@ -19,7 +17,6 @@ An **AI-powered RFID system** that automates the item recovery process:
 ---
 
 ## 🌟 Features
-
 - 🎯 Real-time item detection and logging
 - 📲 Instant notifications via Web Portal
 - 📡 ESP32 + RFID + Firebase integration
@@ -33,24 +30,24 @@ An **AI-powered RFID system** that automates the item recovery process:
 ### 🔧 Software & Web Technologies
 
 | Dependency           | Version / Info        | Purpose                               |
-|----------------------|------------------------|----------------------------------------|
-| **Arduino IDE**      | 2.2.1+                 | Programming ESP32 microcontroller      |
-| **Firebase**         | Latest                 | Cloud database & real-time storage     |
-| **HTML / CSS / JS**  | Standard               | Frontend for the web portal            |
-| **Bootstrap**        | 5.3                    | UI design and responsiveness           |
+|----------------------|----------------------|----------------------------------------|
+| **Arduino IDE**      | 2.2.1+               | Programming ESP32 microcontroller      |
+| **Firebase**         | Latest               | Cloud database & real-time storage     |
+| **HTML / CSS / JS**  | Standard             | Frontend for the web portal            |
+| **Bootstrap**        | 5.3                  | UI design and responsiveness           |
 
 ### 📚 Arduino Libraries
 
 | Library Name       | Purpose                                  |
-|--------------------|-------------------------------------------|
-| `MFRC522`          | To interface with RFID RC522 module       |
-| `SPI`              | SPI communication between ESP32 and RFID  |
-| `WiFi`             | ESP32 WiFi connectivity                   |
-| `HTTPClient`       | Send data to Firebase or external server  |
+|--------------------|-----------------------------------------|
+| `MFRC522`          | To interface with RFID RC522 module     |
+| `SPI`              | SPI communication between ESP32 and RFID |
+| `WiFi`             | ESP32 WiFi connectivity                 |
+| `HTTPClient`       | Send data to Firebase or external server |
 
 ### ⚙️ Hardware Components
 
-| Component                | Purpose                                 |
+| Component                | Purpose                                  |
 |--------------------------|------------------------------------------|
 | **ESP32**                | Core controller and processor            |
 | **RFID Scanner (RC522)** | Detects RFID-tagged items                |
@@ -62,54 +59,72 @@ An **AI-powered RFID system** that automates the item recovery process:
 
 ## 🛠️ Setup Instructions
 
-1️⃣ Clone the repository git clone https://github.com/Nikhil06052005/CodeForge.gitcd
+1. **Clone the repository**
+   ```bash
+    https://github.com/Nikhil06052005/CodeForge
+   ```
 
-2️⃣ Open the frontend
-Open index.html in your browser to run the web app.
+2. **Setup Web Portal**
+   - Open `index.html` in browser (or use Live Server in VS Code)
 
-3️⃣ Hardware Setup
-Open the Arduino code in Arduino IDE.
+3. **Setup Firebase**
+   - Create a project in Firebase Console
+   - Add your config keys to `firebase.js` or `.env`
 
-Select ESP32 board from the board manager.
+4. **Upload Code to ESP32**
+   - Open Arduino IDE
+   - Install the required libraries via Library Manager
+   - Select your board as `ESP32`
+   - Upload the code from `esp32-code/main.ino`
 
-Connect the RFID scanner, RFID tag, and ESP32 microcontroller on a breadboard as per the circuit diagram.
+5. **Hardware Connections**
+   - Connect RC522 to ESP32 using SPI pins
+   - Power the circuit with USB or 5V
 
-Upload the Arduino code to the ESP32.
+---
 
-4️⃣ Firebase Setup
-Replace the Firebase config in the code with your own Firebase project credentials (both in Arduino code and website if required).
+## 🖼️ Demo & Media
 
-Ensure Firebase Realtime Database is enabled.
+### 📷 Project Photos
+> (https://drive.google.com/drive/folders/1GEwAj8k6PxM7n1XuxAKo1ssfxcFo3m4T?usp=sharing)
 
-5️⃣ You're ready to go! 🚀
+### 🎥 Video Demo
+> (https://youtu.be/fNc4tfdzuwY?si=nxwXW1-SpKHRCGb2)
 
-🖼️ Screenshots 
+---
 
-📊 Dashboard and 🔑Login Page https://drive.google.com/drive/folders/1GEwAj8k6PxM7n1XuxAKo1ssfxcFo3m4T?usp=drive_link
+## 👨‍💻 Team Members
 
-🎥 Demo Video
-Watch the Video https://youtube.com/shorts/fNc4tfdzuwY?feature=share
+| Name | Role |
+| --- | --- |
+| **Harshvardhan** | Hardware development and cloud integration (ESP32 + Firebase) |
+| **Nikhil** | Developed the web portal and Firebase integration |
+| **Sneha** | UI design and frontend enhancements |
+| **Shivam Tripathi** | Project lead, media & documentation, and hardware contributor |
 
-👥 Team Members
+---
 
-Harshvardhan – Hardware & Cloud Integration
+## 📜 License
+This project is licensed under the [MIT License](LICENSE).
 
-Nikhil – Website Developer
+---
 
-Sneha – UI Designer & Frontend Support
+## 🤝 Contribution
+Feel free to fork this repo and submit pull requests!
+To contribute:
+- Create a new branch
+- Make your changes
+- Submit a pull request
 
-Shivam Tripathi – Project Lead, Media, Hardware Support & Integration
+---
 
-🧠 Future Plans
+## 🔮 Future Scope
 
-📍 GPS-based lost-item alerts
+- 📱 Mobile app for item detection and alerts
+- 🌍 GPS-based outdoor tracking
+- 🧠 AI image recognition to identify items visually
+- 🔐 Admin dashboard with analytics and user roles
 
-🎥 Use computer vision to identify objects via CCTV
+---
 
-📱 Build a mobile app version for wider accessibility
-
-📜 License
-
-This project is licensed under the MIT License.
-
-Made with ❤️ by Team Hackerworld_Geeks for the CodeForge Hackathon
+> Made with ❤️ by Team Hackerworld_Geeks for the CodeForge Hackathon
