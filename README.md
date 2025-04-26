@@ -60,10 +60,7 @@ An **AI-powered RFID system** that automates the item recovery process:
 ## 🛠️ Setup Instructions
 
 1. **Clone the repository**
-   ```bash
-    https://github.com/Nikhil06052005/CodeForge
-   ```
-
+   
 2. **Setup Web Portal**
    - Open `index.html` in browser (or use Live Server in VS Code)
 
